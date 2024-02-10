@@ -1,4 +1,3 @@
-import { setSelectionRange } from "@testing-library/user-event/dist/utils";
 import React, { useState } from "react";
 import MyButton from "./MyButton";
 import DiaryItem from "./DiaryItem";
