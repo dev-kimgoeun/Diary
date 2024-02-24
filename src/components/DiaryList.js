@@ -15,20 +15,18 @@ const filterOptionList = [
     {value:"bad", name:"나쁜 감정"},
 ]
 
-const ControlMenu = ({value, onChnage, optionList}) => {
+const ControlMenu = React.memo(({value, onChange, optionList}) => {
     return ( 
-    <select className="ControlMenu" value={value} onChange={(e) => onChnage(e.target.value)}>
+    <select className="ControlMenu" value={value} onChange={(e) => onChange(e.target.value)}>
         {optionList.map((it, idx) => <option key={idx} value={it.value}>{it.name}</option>)}
     </select>
     );
-};
+});
 
 const DiaryList = ({diaryList}) => {
     const navigate = useNavigate();
     const[sortType, setSortType] = useState('latest');
     const[filter,setFilter] =  useState("all");
-
-
 
     const getProcessedDiaryList = () => {
 
@@ -60,8 +58,8 @@ const DiaryList = ({diaryList}) => {
     <div className="DiaryList">
         <div className="menu_wrapper">
             <div className="left_col">
-                <ControlMenu value={sortType} onChnage={setSortType} optionList={sortOptionList} />
-                <ControlMenu value={filter} onChnage={setFilter} optionList={filterOptionList} />       
+                <ControlMenu value={sortType} onChange={setSortType} optionList={sortOptionList} />
+                <ControlMenu value={filter} onChange={setFilter} optionList={filterOptionList} />       
             </div>
             <div className="right_col">
                 <MyButton type={'positive'} text={'새 일기쓰기'} onClick={() => navigate("/new")} />
