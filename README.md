@@ -2,6 +2,8 @@
 
 # https://kimgongon-react-project.web.app/
 
+<br />
+
 ### 감정을 기록하고 하루를 기억할 수 있는 감정 일기장입니다! 
 
 <br />
@@ -10,7 +12,7 @@
 
 <br />
 
-일기 작성페이지 
+#### 일기 작성페이지 
 
 <br />
 
@@ -18,9 +20,16 @@
 
 <br />
 
+#### 일기 목록
+
+<br />
+
 <img width="503" alt="3" src="https://github.com/dev-kimgoeun/Diary/assets/148428523/85edabce-6754-4d8f-ac35-3f3beb4bbd3b">
 
 <br />
 
+#### 일기 수정하기
+
+<br />
 
 </div>
